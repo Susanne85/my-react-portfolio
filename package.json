@@ -12,9 +12,8 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
- 
+  "homepage": "https://susanne85.github.io/my-react-portfolio/",
   "scripts": {
-    "homepage": "https://susanne85.github.io/my-react-portfolio/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
