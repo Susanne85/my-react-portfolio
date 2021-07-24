@@ -9,7 +9,7 @@ export default function AboutMe() {
                 <div className="card-text">
                     <h3>I love to create websites that are creative and meet the needs of my customers.</h3>
                     <p>I have learnt the basics of:</p>
-                    <ul className="applicationsList">
+                    <ul>
                         <li>HTML, CSS, javascript and Bulma as a CSS framework;</li>
                         <li>Displaying images, use of the anchor tag to jump to an external website</li>
                         <li>APIs from third parties such as google and openweather</li>
