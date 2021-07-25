@@ -5,6 +5,13 @@
 }
 
 .card-content {
+  background-color: #bfbfbd;
+  border-color: blue;
+  border-style: solid;
+  color: black;
+}
+
+.footer-content{
   display:inline-flex;
   padding:10px;
   background-color: #bfbfbd;
