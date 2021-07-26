@@ -10,7 +10,7 @@ export default function NavPort(props) {
         <ul className="navbar" >
             <li className="nav-item">
                 <Link to='/'
-                    className={location.pathname === '/home' ? 'nav-link active' : 'nav-link'}
+                    className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
                     >
                     Susanne
                 </Link>
@@ -26,7 +26,7 @@ export default function NavPort(props) {
             <li className="nav-item">
                 <Link
                     to='/contact'
-                    className={location.pathname === 'Contact' ? 'nav-link active' : 'nav-link'}
+                    className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'}
                 >
                     Contact Me
                 </Link>
@@ -34,7 +34,7 @@ export default function NavPort(props) {
             <li className="nav-item">
                 <Link
                     to='/portfolio'
-                    className={location.pathname === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+                    className={location.pathname === '/portfolio' ? 'nav-link active' : 'nav-link'}
                 >
                     Portfolio
                 </Link>
@@ -42,7 +42,7 @@ export default function NavPort(props) {
             <li className='nav-item'>
                 <Link
                     to='/resume'
-                    className={location.pathname === 'Resume' ? 'nav-link active' : 'nav-link'}
+                    className={location.pathname === '/resume' ? 'nav-link active' : 'nav-link'}
                 >
                     Resume
                 </Link>

@@ -21,6 +21,10 @@
   padding:0;
   height: 60px;
 }
+.nav-link.active {
+  padding:0;
+  color: black;
+}
 
 .navbar a {
   flex-direction: column;
@@ -32,10 +36,6 @@
   font-size: 2.5rem;
   text-decoration: none;
   margin-right: 20px;
-}
-.nav-link.active {
-  padding:0;
-  color: black;
 }
  
 .nav-item{
