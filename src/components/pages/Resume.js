@@ -12,8 +12,6 @@ export default function Resume() {
                     <Link to={MyResume} target="_blank" download='Susannes-Resume'>Resume</Link>
                     </h3>
                 </div>
-            </div>
-            <div className="card-content">
                 <div className="card-text">
                     <h2>Front-End Proficiencies</h2>
                     <ul>

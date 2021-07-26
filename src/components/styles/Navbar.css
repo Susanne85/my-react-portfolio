@@ -6,20 +6,12 @@
 
 .card-content {
   background-color: #bfbfbd;
+  margin: 8px;
   border-color: blue;
   border-style: solid;
   color: black;
 }
 
-.footer-content{
-  display:inline-flex;
-  padding:10px;
-  background-color: #bfbfbd;
-  color: black;
-  font-weight: bold;
-  height: 100%;
-  width:100%;
-}
 .card-text{
   margin-left:15px ;
 }

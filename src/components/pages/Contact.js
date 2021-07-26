@@ -1,10 +1,12 @@
 import { React, Component, useState } from 'react';
-
+import emailjs from 'emailjs-com'
 const myNameStyle = { marginLeft: '60px' };
-const myNameInputStyle = { marginLeft: '5px' };
-const myMessageStyle = { marginLeft: '40px', lineHeight: '20', flex: '1' };
+const myNameInputStyle = { marginLeft: '5px', flex: '1' };
+const myMessageStyle = { marginLeft: '42px', lineHeight: '20', flex: '1' };
 const myMessageInputStyle = { lineHeight: '20', flex: '1' };
+const myErrorMessageStyle = { marginLeft: '105px', flex: '1'}
 const myFormStyle = { background: '#bfbfbd', borderColor: 'blue', borderStyle: 'solid', margin: '8px' }
+const myButtonStyle = { marginLeft:'115px', marginBottom:'10px'}
 export default class Contact extends Component {
     constructor(props) {
         super(props);
@@ -29,33 +31,36 @@ export default class Contact extends Component {
         });
         this.setState({ value: event.target.value });
         this.setState({ errorMessage: '' });
-        
+    }
+
+    handleSubmit(event) {
+
+        event.preventDefault();
+
+        this.setState({ errorMessage: '' });
+
         if (this.state.name === '') {
             console.log('onchange', this.state.name);
             this.setState({ errorMessage: 'Name cannot be null' });
             return;
         }
         if (this.state.email === '') {
-            console.log('onchange', this.state.email);
             this.setState({ errorMessage: 'Email Address cannot be null' });
             return;
-        } else {
-            const emailAddress = this.state.email;
-            if (!emailAddress.includes('@')) {
-                this.setState({ errorMessage: 'Please enter a valid email address' });
-                return;
-            }
         }
         if (this.state.message === '') {
             this.setState({ errorMessage: 'Message text cannot be null' });
             return;
         }
-    }
 
-    handleSubmit(event) {
-       
-        alert('A name was submitted: ' + this.state.name + this.state.email + this.state.message)
-        event.preventDefault();
+        alert('Submitted Details - ' + this.state.name + ' ' + this.state.email + ' ' +this.state.message)
+        // emailjs.sendForm('gmail', 'template_xyqn1za', event.target, 'user_YVZ2erf2iRYzv0syXun2i')
+        // .then((result) => {
+        //     console.log(result.text);
+        // }, (error)=>{
+        //     console.log(error)
+        // })
+        // event.target.reset();
     }
 
     render() {
@@ -74,7 +79,7 @@ export default class Contact extends Component {
                 <label className="d-flex flex-wrap p-2" style={myNameInputStyle}>
                     Email Address:
                     <input
-                        type="text"
+                        type="email"
                         name="email"
                         style={myNameInputStyle}
                         placeholder='Enter your email'
@@ -91,15 +96,16 @@ export default class Contact extends Component {
                         value={this.state.message}
                         onChange={this.handleChange} />
                 </label>
-                <label className="d-flex flex-wrap p-2" style={myNameInputStyle} >
+                <label className="d-flex flex-wrap p-2 "  >
                     <input
                         type='textArea'
                         name='errorMessage'
+                        style={myErrorMessageStyle}
                         readOnly={true}
                         value={this.state.errorMessage}
                     />
                 </label>
-                <input
+                <input style={myButtonStyle}
                     type="submit"
                     value="Submit" />
             </form>

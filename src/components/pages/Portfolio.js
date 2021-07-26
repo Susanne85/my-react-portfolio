@@ -4,7 +4,7 @@ import myWeather from '../images/weather.jpg';
 import myAppointment from '../images/app-icon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBlog, faWalking } from '@fortawesome/free-solid-svg-icons';
-import '../styles/Navbar.css';
+
 const myNavStyle = { flexBasis: '49%', justifyContent: 'space-evenly' };
 const myGithubStyle = { fontSize: '25px', marginLeft: '10px' };
 const myIconStyle = { fontSize: '50px' };

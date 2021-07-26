@@ -6,7 +6,7 @@ import Portfolio from "./components/pages/Portfolio";
 import Resume from "./components/pages/Resume";
 import Footer from "./components/pages/Footer";
 import Contact from "./components/pages/Contact";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 export default function MyApp() {
 
     return (
@@ -19,6 +19,7 @@ export default function MyApp() {
                     <Route exact path="/portfolio" component={Portfolio}></Route>
                     <Route exact path="/contact" component={Contact}></Route>
                     <Route exact path="/resume" component={Resume}></Route>
+                    <Redirect to="/"/>
                 </Switch>
             </Layout>
             <Footer />

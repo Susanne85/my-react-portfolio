@@ -6,23 +6,12 @@ export default function AboutMe() {
         <div className="card">
             <div className="card-content">
                 <img src={mySelf} target="_html" alt="Me in China" />
-                <div className="card-text">
-                    <h3>I love to create websites that are creative and meet the needs of my customers.</h3>
-                    <p>I have learnt the basics of:</p>
-                    <ul>
-                        <li>HTML, CSS, javascript and Bulma as a CSS framework;</li>
-                        <li>Displaying images, use of the anchor tag to jump to an external website</li>
-                        <li>APIs from third parties such as google and openweather</li>
-                        <li>Server processing - including encription of passwords, use of sequelize for undertaking database
-                            queries</li>
-                        <li>Client/Server applictions - to store application data in databases</li>
-                    </ul>
-                    <a href="https://susanne85.github.io/prework-about-me/"
-                        target="_html" alt="My information">
-                        More aboutMe
-                    </a>
-                </div>
+                <h3>I love to create websites that are creative and meet the needs of my customers.</h3>
+                <h4>I have worked in the Mining industry for six years and the computer industry for twenty years.</h4>
+                <h4>Over the last ten years I have been teaching English in China from preschoolers to adults and also managed to accommodate travelling to England, Ireland, Costa Rica and Spain in that time.</h4>
+                <h4>Although working in the computing industry for twenty years, this is my first foray into Web design and Client/Server technologies.</h4>
+                <h4>It has been a very exciting, frustrating and amazing journey of learning the very basics of HTML, Javascript and CSS, and then journeying into the first stages of developing Progressive Web Applicaions and the use of React</h4>
             </div>
-        </div>
+        </div >
     )
 }
